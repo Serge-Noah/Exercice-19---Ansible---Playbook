@@ -1,0 +1,52 @@
+---
+- name: "Apache installation avec Docker"
+  hosts: prod
+  become: true  
+  vars_files:
+    - ./vars/secret-variables.yaml
+  pre_tasks:
+    - name: INSTALL DEPENDANCES DOCKER
+      apt:
+        name:
+          - apt-transport-https
+          - ca-certificates
+          - curl
+          - software-properties-common
+          - python3-docker
+        state: present
+        update_cache: yes
+      tags: docker
+
+    - name: AJOUT CLE GPG DE DOCKER
+      apt_key:
+        url: https://download.docker.com/linux/ubuntu/gpg
+        state: present
+      tags: docker
+
+    - name: AJOUT DEPOT APT DE DOCKER
+      apt_repository:
+        repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu jammy stable
+        state: present
+      tags: docker
+
+  tasks:
+    - name: INSTALL DOCKER
+      apt:
+        name: docker-ce
+        state: present
+        update_cache: yes
+      tags: docker
+
+    - name: DEMARRE DOCKER
+      ansible.builtin.systemd_service:
+        state: started
+        name: docker
+      tags: docker
+
+    - name: Create Apache container
+      community.docker.docker_container:
+        name: webapp
+        image: httpd
+        ports:
+          - "80:80"
+      tags: webapp
