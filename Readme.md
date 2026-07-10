@@ -184,6 +184,12 @@ Vérification du conteneur Docker :
 sudo docker ps
 ```
 
+<details>
+  <summary><strong>Détail image :</strong></summary>
+  <br>
+  <img src="images/3.png"  width="800"/>
+</details>
+
 La commande confirme que le conteneur **Apache HTTPD** est bien démarré et fonctionne correctement.
 
 Enfin, l'accès au serveur Web a été validé à partir d'un navigateur en utilisant l'adresse IP du serveur, ce qui permet d'afficher la page d'accueil par défaut d'Apache.
