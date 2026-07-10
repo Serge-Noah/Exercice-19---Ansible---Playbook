@@ -197,7 +197,7 @@ Enfin, l'accès au serveur Web a été validé à partir d'un navigateur en util
 details>
   <summary><strong>Détail image :</strong></summary>
   <br>
-  <img src="images/4.png" width="800"/>
+  <img src="images/4.png" width="600"/>
 </details>
 
 ---
