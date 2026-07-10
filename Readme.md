@@ -89,6 +89,12 @@ Validation de la connectivité :
 ansible -m ping all
 ```
 
+<details>
+  <summary><strong>Détail image :</strong></summary>
+  <br>
+  <img src="images/1.png" alt="Capture d'écran de l'exécution" width="800"/>
+</details>
+
 Les deux hôtes (`control` et `srv-apache-1`) ont répondu avec l'état **SUCCESS**, confirmant que l'inventaire et la connexion SSH étaient correctement configurés.
 
 ---
