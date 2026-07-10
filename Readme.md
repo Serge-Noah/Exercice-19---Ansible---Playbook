@@ -148,6 +148,13 @@ Exécution :
 ansible-playbook deploy.yaml --ask-vault-pass
 ```
 
+
+<details>
+  <summary><strong>Détail image :</strong></summary>
+  <br>
+  <img src="images/2.png"  width="800"/>
+</details>
+
 ### Analyse du résultat
 
 L'exécution s'est terminée sans erreur (`failed=0`).
