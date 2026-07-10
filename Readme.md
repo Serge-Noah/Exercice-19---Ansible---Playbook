@@ -194,6 +194,12 @@ La commande confirme que le conteneur **Apache HTTPD** est bien démarré et fon
 
 Enfin, l'accès au serveur Web a été validé à partir d'un navigateur en utilisant l'adresse IP du serveur, ce qui permet d'afficher la page d'accueil par défaut d'Apache.
 
+details>
+  <summary><strong>Détail image :</strong></summary>
+  <br>
+  <img src="images/4.png" width="800"/>
+</details>
+
 ---
 
 # Conclusion
